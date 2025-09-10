@@ -52,7 +52,7 @@ if pick_genre.lower() == 'drama':
         if era == '2000s':
             print("The Manga that I would recommend is \"Bagamond\"")
         elif era == '2020s':
-            print("The Manga that I would recommend is The Apothecary Diaries")
+            print("The Manga that I would recommend is \"The Apothecary Diaries\"")
         else:
             print("Sorry, I couldn't find Manga that suit to your preferences:(")
     
