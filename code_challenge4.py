@@ -26,7 +26,7 @@ if pick_genre.lower() == 'romance':
             print("The Manga that I would recommend is \"Dengeki Daisy\"")
         elif era == '2020s':
             print("The Manga that I would recommend is \"Kaguya-sama: Love War\"")
-        else:
+        else: 
             print("Sorry, I couldn't find Manga that suit to your preferences:(")
     
 if pick_genre.lower() == 'drama':
