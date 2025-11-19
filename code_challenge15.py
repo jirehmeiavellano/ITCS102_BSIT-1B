@@ -1,11 +1,10 @@
 import os
-import json
+import json 
 
 os.system('cls')
 print("──────────────────────────")
 print("Student Information System")
 print("──────────────────────────\n")
-
 
 #empty dictionary
 student_records = {}
@@ -157,3 +156,4 @@ while True:
 
 
         
+
