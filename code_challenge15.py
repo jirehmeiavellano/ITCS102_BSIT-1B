@@ -155,7 +155,7 @@ while True:
         print("IMPORT STUDENT'S DATA")
         
         with open('students_records.json', 'r') as new_file:
-            imported_records = json.dump(new_file)
+            imported_records = json.load(new_file)
 
         student_records = imported_records
         print("\n\nDATA IMPORTED TO JSON")
