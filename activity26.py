@@ -14,9 +14,9 @@ pygame.display.set_caption('Snake Game')
 
 # Colors (RGB)
 white = (255, 255, 255)
-gray = (0, 0, 0)
-yellow = (213, 50, 80)
-green = (0, 255, 0)
+blue = (175, 214, 255)
+rose = (170, 0, 0)
+magenta = (192, 0, 192)
 
 # Game speed and block size
 clock = pygame.time.Clock()
@@ -30,7 +30,7 @@ font_style = pygame.font.SysFont(None, 30)
 #Step 2 
 def draw_snake(snake_list):
     for block in snake_list:
-        pygame.draw.rect(screen, green, [block[0], block[1], snake_block, snake_block])
+        pygame.draw.rect(screen, magenta, [block[0], block[1], snake_block, snake_block])
 
 #Step 3 
 def game_loop():
@@ -55,9 +55,9 @@ def game_loop():
 
         # Loss screen
         while game_close:
-            screen.fill(gray)
-            message = font_style.render('You Lost! Press Q-Quit or P-Play Again', True, yellow)
-            screen.blit(message, [width / 10, height / 7])
+            screen.fill(blue)
+            message = font_style.render('You Lost! Press Q-Quit or P-Play Again', True, rose)
+            screen.blit(message, [width / 18, height / 15])
             pygame.display.update()
 
             for event in pygame.event.get():
@@ -95,8 +95,8 @@ def game_loop():
         y += y_change
 
         # Draw background and food
-        screen.fill(gray)
-        pygame.draw.rect(screen, yellow, [food_x, food_y, snake_block, snake_block])
+        screen.fill(blue)
+        pygame.draw.rect(screen, rose, [food_x, food_y, snake_block, snake_block])
 
         # Add snake head
         snake_head = [x, y]
