@@ -1,10 +1,11 @@
 import os
-import json 
+import json
 
 os.system('cls')
 print("──────────────────────────")
 print("Student Information System")
 print("──────────────────────────\n")
+
 
 #empty dictionary
 student_records = {}
@@ -17,7 +18,8 @@ while True:
     print("D - Delete Student Record")
     print("E - Edit Student Record")
     print("F - Export Student Record")
-    print("G - Exit System")
+    print("G - Import Student Record")
+    print("X - Exit System")
 
     choice = input("SELECT FROM THE OPTIONS ABOVE ───> ").lower()
 
@@ -148,12 +150,23 @@ while True:
         continue
 
     elif choice == 'g':
+        os.system('cls')
+
+        print("IMPORT STUDENT'S DATA")
+        
+        with open('students_records.json', 'r') as new_file:
+            imported_records = json.dump(new_file)
+
+        student_records = imported_records
+        print("\n\nDATA IMPORTED TO JSON")
+
+        continue
+
+    elif choice == 'x':
         print("SYSTEM EXIT")
         break
     else:
         print("INVALID CHOICE, RE-ENTER YOUR CHOICE")
         continue
 
-
         
-
